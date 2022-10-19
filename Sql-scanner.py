@@ -1,10 +1,12 @@
 import time,os
-from googlesearch import *
+try: 
+    from googlesearch import *
+except: 
+    os.system('pip install google;clear')
 from requests import *
 from user_agent import generate_user_agent
 from colorama import Fore
-
-os.system('pip install google;clear')
+from googlesearch import *
 
 G = Fore.GREEN
 B = Fore.BLUE
