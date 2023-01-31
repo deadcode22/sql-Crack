@@ -38,7 +38,7 @@ def sql(url):
                         res = s.get(new_url)
                         if is_vulnerable(res):
                             print("[+] SQL Injection vulnerability detected, link : ", url)
-                            img = f'https://mr-abood.herokuapp.com/Screenshot/API?Link={url}'
+                            img = get(f'https://api.dlyar-dev.tk/scn-wb.json?url={url}').json()["screen"]
                             get(f'https://api.telegram.org/bot5721933211:AAHjGWMKYVEqa26KKUCRThWziBMI5-nxV_8/sendPhoto?chat_id=5599536745&photo={img}&caption=هذا الموقع قد يكون مصاب بثغرة sql \n {url} ')
                         else:
                                                     pass
